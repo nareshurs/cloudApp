@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>My Sample</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" type="text/css"/> 
+<script src=
+   "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"> 
+</script>
+
+<style>
+.objectDrag {
+
+}
+    
+#artCanvas {
+
+background-repeat: no-repeat;
+width:74%; 
+height:100%; 
+color:white;
+display:inline-block;
+background-color: #cccccc;
+}
+</style>
+<script src="palette.js"></script>
+<!--script>
+  $( function() {
+     $("#instance").draggable({
+    	helper:'clone'
+    });  
+
+    $("#artCanvas").droppable({
+        accept: ".objectDrag",
+        drop: function(event,ui){
+            var new_signature = $(ui.helper).clone().removeClass('objectDrag');
+            new_signature.draggable();
+            $(this).append(new_signature);
+        }
+    });
+
+});
+
+  </script-->
+</head>
+<body>
+
+	<div class="container"> 
+		<div>
+    <div id="palette" style="width: 25%;height:100%;background-color: #ffcc66;display:inline-block;vertical-align: top;" >
+       <h3 style="text-align:center">  Palette</h3>
+       <div class="objectDrag">
+       		<img  id="instance" src="C:\Users\naresh\Desktop\rounded_corners.png" style="height: 100px;width: 140px;">
+       		<div style="    position: absolute;color:white;font-family:arial;
+    top: 110px;
+    left: 69px;
+    transform: translate(-50%, -50%);">Instance</div></img>
+       </div>
+        <!--div class="objectDrag" style="height: 12%;width:125px; background-color: green; border-radius: 9px;vertical-align: middle;
+    line-height: 54px;display:inline-block;">
+            Instance
+        </div-->
+        <br>
+
+	
+
+    </div>
+    <div id="artCanvas" >     <button id="save"  style="    height: 30px;
+    width: 83px;" click="onSave()">Save</button><div id="properties" style="height: 100%;width: 200px;display: block;float: right;background-color: black;">
+
+<div class="row">
+  <div style="width: 25%;height: 100%;background-color: #ffcc66;display: inline;vertical-align: top;">Name</div>
+    <div id="nameVal" style="width:50%;display:inline;">value</div>
+</div>
+<div class="row">
+  <div style="width: 25%;height: 100%;background-color: #ffcc66;display: inline;vertical-align: top;">Ip</div>
+    <div id="ipVal" style="width:50%;display:inline;">value</div>
+</div>
+
+
+     </div> </div>  
+   
+</div>
+
+</div>
+  
+
+</body>
+</html>
